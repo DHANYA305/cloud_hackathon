@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PR Guardian - Security Scanner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🔐 PR Guardian - Security Scanner</h1>
+
+  <!-- 🔥 GitHub PR Section -->
+  <h3>📄 GitHub PR Scanner</h3>
+
+  <input id="owner" placeholder="Owner (e.g. octocat)">
+  <input id="repo" placeholder="Repo (e.g. Hello-World)">
+  <input id="pr" placeholder="PR number">
+
+  <br><br>
+
+  <button onclick="scanGithubPR()">Scan GitHub PR</button>
+  <button onclick="commentOnPR()">Post Comment to PR</button>
+
+  <hr>
+
+  <!-- 🔹 Manual Input -->
+  <h3>✏️ Paste Infrastructure Code</h3>
+
+  <textarea id="codeInput" placeholder="Paste your Terraform / IaC code here..."></textarea>
+
+  <br>
+
+  <button onclick="scanCode()">Scan Code</button>
+
+  <!-- 🔹 Output -->
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
