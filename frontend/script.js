@@ -66,12 +66,19 @@ async function scanGithubPR() {
   );
 
   const data = await res.json();
+  console.log(data);
 
+  // Show the fetched Terraform code
   document.getElementById("codeInput").value = data.code;
 
-  scanCode();
-}
+   // Scan only the added lines
+   document.getElementById("codeInput").value = data.scanCode;
 
+   scanCode();
+
+   // Restore the displayed code after scanning
+   document.getElementById("codeInput").value = data.code;
+}
 
 // ================== POST COMMENT ==================
 async function commentOnPR() {
